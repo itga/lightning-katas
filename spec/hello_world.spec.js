@@ -24,8 +24,8 @@ describe('"hello" function', function () {
     });
 
     // exercise 3: what should happen when the argument is not a valid? use some defaults? throw an error?
-    it('greets the world even thought it is an invalid language', function () {
-        // Test for Array, object, boolean true, boolean false, null and undefined (typeof null)
+    it('greets the world even thought it is invalid input', function () {
+        // Test for 'Number', 'Array', 'object', 'boolean true', 'boolean false', 'null' and 'undefined'
         [ 0, [], {}, true, false, null, undefined ].forEach(function (invalid_example){
             expect(hello(invalid_example)).to.equal('สวัสดี', invalid_example);
         });
