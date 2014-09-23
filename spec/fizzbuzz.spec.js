@@ -21,6 +21,11 @@ describe('"fizzbuzz" function', function () {
 
     // exercise 3: return "Not a FizzBuzz" when not called with a number divisible by both 3 and 5
     it('returns "Not a FizzBuzz" when not called with a number divisible by 3 and 15', function () {
-        expect(fizzbuzz(1)).to.equal('Not a FizzBuzz');
+        expect(fizzbuzz(1)).to.equal(1);
+    });
+
+    // exercise 3: return "Not a FizzBuzz" when not called with a number divisible by both 3 and 5
+    it('returns "Not Valid Input" if it is invalid input', function () {
+        expect(function(){ fizzbuzz({}) }).to.throw("Not Valid Input");
     });
 });

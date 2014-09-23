@@ -1,11 +1,18 @@
 'use strict';
+var _ = require('lodash');
 
 module.exports = function (fizzbuzz) {
-    return fizzbuzz % 3 == 0 && fizzbuzz % 5 == 0 ?
-               'FizzBuzz'
-                : fizzbuzz % 3 == 0
-                    ? 'Fizz'
-                    : fizzbuzz % 5 == 0
-                        ? 'Buzz'
-                        : 'Not a FizzBuzz'
+
+    if (_.isNumber(fizzbuzz) ) {
+
+        return fizzbuzz % 3 == 0 && fizzbuzz % 5 == 0 ?
+            'FizzBuzz'
+            : fizzbuzz % 3 == 0
+            ? 'Fizz'
+            : fizzbuzz % 5 == 0
+            ? 'Buzz'
+            : fizzbuzz
+    } else {
+        throw new Error("Not Valid Input");
+    }
 };
